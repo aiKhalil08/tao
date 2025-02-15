@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Science Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .highlight {
+            background-color: #e1f5fe;
+            padding: 10px;
+            border-left: 4px solid #03a9f4;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Information Science Explorer</h1>
+        
+        <div class="section">
+            <h2>About Information Science</h2>
+            <p>Information science is an interdisciplinary field that studies the collection, classification, manipulation, storage, retrieval, and dissemination of information. It examines the intersection of people, information, and technology systems.</p>
+            
+            <div class="highlight">
+                <p>"Information science is that discipline that investigates the properties and behavior of information, the forces governing the flow of information, and the means of processing information for optimum accessibility and usability."</p>
+                <em>- Harold Borko</em>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Key Concepts</h2>
+            <p>Information science encompasses various key areas including:</p>
+            <ul>
+                <li>Information Architecture</li>
+                <li>Data Management</li>
+                <li>Knowledge Organization</li>
+                <li>Information Retrieval</li>
+                <li>Digital Libraries</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Interactive Demo</h2>
+            <p>Click the button below to see an example of dynamic content:</p>
+            <button onclick="showRandomFact()">Show Random Fact</button>
+            <p id="factDisplay" style="min-height: 50px;"></p>
+        </div>
+
+        <div class="footer">
+            <p>Created for Information Science Assignment</p>
+            <p>Last Updated: February 2025</p>
+        </div>
+    </div>
+
+    <script>
+        function showRandomFact() {
+            const facts = [
+                "The term 'Information Science' was first coined in 1955.",
+                "The world's data doubles approximately every two years.",
+                "The first computer mouse was made of wood.",
+                "The first webpage went live on August 6, 1991.",
+                "Around 90% of the world's data was generated in the last two years."
+            ];
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById('factDisplay').innerHTML = randomFact;
+        }
+    </script>
+</body>
+</html>
